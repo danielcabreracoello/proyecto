@@ -22,7 +22,7 @@ public class Main {
             System.out.println("2. Listar paquetes");
             System.out.println("3. Buscar paquete");
             System.out.println("4. Eliminar paquete");
-            System.out.println("5. Ordenar paquete");//No me sale este metodo, si me lo puedes explicar, ya he visto en el libro pero no lo puedo implentar aqui 
+            System.out.println("5. Ordenar paquete");//No me sale este metodo, si me lo puedes explicar, ya he visto en el libro pero no lo puedo implemetar y estoy bloqueado.
             System.out.println("6. Guardar paquete");//No funciona
             System.out.println("7. Cargar paquete");//No funciona
             System.out.println("8. Salir");
