@@ -1,36 +1,62 @@
 package proyecto;
 
-public class Paquete {
-    private int numeroPaquete;
-    private String dni;
-    private double peso;
-    private int prioridad; //0=normal 1 = alta 2=expres
+import java.util.Comparator;
 
-    public Paquete(int numeroReferencia, String dni, double peso, int prioridad) {
-        this.numeroPaquete = numeroPaquete;
-        this.dni = dni;
-        this.peso = peso;
-        this.prioridad = prioridad;
+public class Paquete implements Comparable<Paquete> {
+
+    String nombre;
+    private int nPaquete;
+
+    public Paquete(String nombre, int paquete) {
+        this.nombre = nombre;
+        this.nPaquete = paquete;
     }
 
-    public int getNumeroPaquete() {
-        return numeroPaquete;
+    public Paquete(String nombre) {
+        this.nombre = nombre;
+        this.nPaquete = 0;
     }
 
-    public String getDni() {
-        return dni;
-    }
-    public double getPeso() {
-        return peso;
+    public String getNombre() {
+        return nombre;
     }
 
-    public int getPrioridad() {
-        return prioridad;
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public int getnPaquete() {
+        return nPaquete;
+    }
+
+    public void setnPaquete(int paquete) {
+        this.nPaquete = paquete;
+    }
+
+    public boolean equals(Paquete c) {
+
+        if (this.nombre.trim().equalsIgnoreCase(c.getNombre().trim())) {
+            return true;
+        }
+
+        return false;
+
+    }
+
+    @Override
+    public int compareTo(Paquete o) {
+        if(nPaquete < o.nPaquete){
+            return -1;
+        }if(nPaquete > o.nPaquete){
+            return 1;
+        }
+        return 0;
+            
     }
 
     @Override
     public String toString() {
-        return "Paquete{" + "numeroPaquete=" + numeroPaquete + ", dni=" + dni + ", peso=" + peso + ", prioridad=" + prioridad + '}';
+        return "nombre=" + nombre + ", NumeroDePaquete=" + nPaquete;
     }
-    
+
 }
